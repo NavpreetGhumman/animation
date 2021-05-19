@@ -1,0 +1,287 @@
+html{
+    box-sizing: border-box;
+}
+*,*::before,*::after{
+    box-sizing: inherit;
+}
+body{
+    background-image: linear-gradient(#013a63, #caf0f8);
+    background-repeat: no-repeat;
+    margin:0;
+}
+
+/****PAGE CONTAINER****/
+#page-container{
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+#section{
+    overflow: hidden;
+}
+.hidden{
+    position: absolute;
+    left: -10000px;
+    height: 1px;
+    width: 1px;
+}
+
+/*****SNOW FLAKES*****/
+.snow{
+    width: 20px;
+    height: 20px;
+    position: fixed;
+    top: -10%;
+}
+.snow{
+    animation: shimmy 20s infinite;
+}
+@keyframes shimmy {
+    0%{top:-10%}
+    100%{top:100%}
+}
+
+.snow:nth-of-type(1){left:15%;animation-delay:0s}
+.snow:nth-of-type(2){left:20%;animation-delay:6s}
+.snow:nth-of-type(3){left:30%;animation-delay:9s}
+.snow:nth-of-type(4){left:40%;animation-delay:11s}
+.snow:nth-of-type(5){left:50%;animation-delay:5s}
+.snow:nth-of-type(6){left:60%;animation-delay:15s}
+.snow:nth-of-type(7){left:70%;animation-delay:19s}
+
+
+/****SNOW BALLS****/
+.snowballs{
+    width: 15px;
+    height:15px;
+    border-radius: 50%;
+    background-color: aliceblue;
+    opacity: .2;
+    position:fixed;
+    top:-10%;
+    z-index:9999;
+    user-select:none;
+    cursor:default;
+    animation-name:snowballs-fall,snowballs-shake;
+    animation-duration:15s,4s;
+    animation-timing-function:linear,ease-in-out;
+    animation-iteration-count:infinite;
+    animation-play-state:running;
+}
+
+
+@keyframes snowballs-fall{
+    0%{top:-10%}
+    100%{top:100%}}
+
+@keyframes snowballs-shake{
+    0%{transform:translateX(0px)}
+    50%{transform:translateX(80px)}
+    100%{transform:translateX(0px)}}
+
+
+.snowballs:nth-of-type(0){left:1%;animation-delay:0s,0s;}
+.snowballs:nth-of-type(1){left:15%;animation-delay:1s,1s}
+.snowballs:nth-of-type(2){left:20%;animation-delay:6s,2s}
+.snowballs:nth-of-type(3){left:30%;animation-delay:4s,2s}
+.snowballs:nth-of-type(4){left:40%;animation-delay:12s,2s}
+.snowballs:nth-of-type(5){left:50%;animation-delay:8s,3s}
+.snowballs:nth-of-type(6){left:60%;animation-delay:6s,2s}
+.snowballs:nth-of-type(7){left:70%;animation-delay:2.5s,1s}
+.snowballs:nth-of-type(8){left:80%;animation-delay:10s,0s}
+.snowballs:nth-of-type(9){left:90%;animation-delay:9s,1.5s}
+.snowballs:nth-of-type(10){left:100%;animation-delay:6s,2s}
+.snowballs:nth-of-type(11){left:90%;animation-delay:3s,2s}
+.snowballs:nth-of-type(12){left:15%;animation-delay:5s,1.5s}
+.snowballs:nth-of-type(13){left:30%;animation-delay:5s,2s}
+.snowballs:nth-of-type(9){left:90%;animation-delay:6s,3s}
+.snowballs:nth-of-type(9){left:1%;animation-delay:7s,1.5s}
+.snowballs:nth-of-type(9){left:45%;animation-delay:7s,2s}
+
+
+/*****MAIN HEADING*****/
+
+li{
+    list-style-type: none;
+}
+.grid{
+    transition: all 3s;
+}
+
+/*****MERRY CHRISTMAS*****/
+.grid {
+  animation: slideIn ease-in-out forwards 6S;
+  z-index: 10;
+  opacity: 0;
+  padding: 0 5px;
+}
+@keyframes slideIn {
+  100% {
+    opacity: 1;
+  }
+}
+.grid li{
+    display: inline-block;
+}
+#merry, #christmas{
+    text-align: center;
+}
+.grid li span {
+    display: inline-block;
+    font-size: clamp(45px, 10vw, 150px);
+	line-height: 1;
+	position: relative;
+	color: #e3002d;
+	transform-style: preserve-3d;
+	perspective: 500px;
+	z-index: 1;
+}
+.grid li span:before,
+.grid li span:after {
+	position: absolute;
+	content: attr(data-letter);
+	line-height: inherit;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 2;
+	transition: all 0.3s;
+}
+.grid li span:before {
+	text-shadow: none;
+	color: hsla(0, 0%, 0%, 0.12);
+}
+.letter-left span:before,
+.letter-left span:after {
+	transform-origin: 0 50%;
+}
+.letter-left span:before {
+	transform: scale(1.08, 1) skew(0deg, 1deg);
+}
+.letter-left span:after {
+	text-shadow: 
+		-1px 0px 0px #fff, 
+		 3px 0px 1px #fff;
+	transform: rotateY(-15deg);
+}
+.letter-left:hover span:before {
+	transform: scale(0.85,1) skew(0deg,20deg);
+}
+.letter-left:hover span:after {
+	transform: rotateY(-40deg);
+}
+
+
+/*****SNOWMAN******/
+#snowman{
+    float: right;
+    width: 50%;
+    height:500px;
+}
+
+/*****SNOWMAN ANIMATION*****/
+#snowman{
+    animation:spin 6s linear infinite;
+}
+
+@keyframes spin 
+{0%{
+    transform: rotate(-20deg);
+    transform-origin: bottom;
+    }
+    50%{
+        transform: rotate(20deg);
+        transform-origin: bottom;
+    }
+    100%{
+        transform: rotate(-20deg);
+        transform-origin: bottom;
+    }
+}
+
+
+/******CHRISTMAS TREE*****/
+#tree{
+    float:left;
+    width: 50%;
+    height:500px;
+}
+.light{
+  animation: blink-animation 1s steps(5, start)  infinite;
+}
+/*****LIGHTS BLINK ANIMATION****/
+@keyframes blink-animation{
+    to{
+        visibility: hidden;
+    }
+}
+
+
+/****MEDIA QUERIES*****/
+@media screen and (max-width: 1016px){
+    #snowman, #tree{
+       height: 300px;
+}
+    body{
+        min-height: 100vh;
+    }
+    #section{
+        overflow: hidden;
+        position: absolute;
+        bottom: 0;
+        width:100%;
+    }
+}
+
+@media screen and (max-width: 768px){ 
+    .snowballs{
+        width:12px;
+        height: 12px;
+    }.snow{
+        width:15px;
+        height: 15px;
+    }
+    body{
+        min-height: 100vh;
+    }
+    #section{
+        overflow: hidden;
+        position: absolute;
+        bottom: 0;
+        width:100%;
+    }
+}
+@media screen and (max-width: 420px){
+    #snowman,#tree{
+       height: 200px;
+    }
+    #merry{
+        padding-top: 100px;
+    }   
+}
+@media screen and (max-width: 320px){ 
+    .snowballs{
+        width:7px;
+        height: 7px;
+    }
+    .snow{
+        width:10px;
+        height: 10px;
+    }
+    #snowman,#tree{
+       height: 150px;
+    }
+    body{
+        min-height: 100vh;
+    }
+    #section{
+        overflow: hidden;
+        position: absolute;
+        bottom: 0;
+        width:100%;
+    }
+}
+
+
+
