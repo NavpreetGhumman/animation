@@ -5,5 +5,6 @@ Merry Christmas is an animation built to reveal my CSS skills.It includes Snow F
 ### Languages
 Built with HTML and CSS from scratch. No framworks
 
-<img width="1434" alt="Screen Shot 2021-05-18 at 7 37 53 AM" src="https://user-images.githubusercontent.com/71792075/119275138-58fddd00-bbe1-11eb-8acb-241a9ce20390.png">
+<img width="1427" alt="Screen Shot 2021-05-18 at 7 40 46 AM" src="https://user-images.githubusercontent.com/71792075/119275173-8185d700-bbe1-11eb-97bb-5113a24d6861.png">
+
 
